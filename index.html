@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Haiti League · Readiness Cards</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#20304a;background:#f4f7fb}*{box-sizing:border-box}body{margin:0}.app{max-width:1080px;margin:auto;padding:22px 18px 80px}header{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:22px}h1{font-size:25px;letter-spacing:-.7px;margin:4px 0}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#7787a1;font-weight:800}.muted{font-size:12px;color:#8290a6}.old{font-size:12px;color:#4568a0;text-decoration:none;font-weight:700}.controls{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:17px}.seg{display:flex;gap:3px;background:#e7ecf4;padding:4px;border-radius:12px}.seg button{border:0;border-radius:9px;padding:10px 18px;background:transparent;color:#61728c;font-weight:750;cursor:pointer}.seg button.active{background:white;color:#1c3556;box-shadow:0 1px 5px #172b451a}select{padding:10px 42px 10px 15px;border:1px solid #dce4ef;background:white;border-radius:9px;max-width:100%;color:#283a56;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%233b526f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;background-size:18px}.count{font-size:12px;color:#7b8aa1;margin-bottom:14px}.groups{display:grid;gap:15px}.group{border:1px solid #cddbec;border-radius:16px;background:white;box-shadow:0 5px 18px #1b325012;overflow:hidden}.grouphead{padding:17px 18px;background:#e7eff9;border-bottom:1px solid #cfdbeb;border-left:4px solid #7d9ecb}.heading{display:flex;justify-content:space-between;align-items:start;gap:10px}.name{font-weight:820;font-size:16px;line-height:1.35}.name-line{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.chips{display:inline-flex;gap:5px}.chip{font-size:10px;font-weight:800;color:#425c7d;background:#e4ecf7;border-radius:6px;padding:4px 7px;white-space:nowrap}.sub{font-size:12px;color:#8592a5;margin-top:5px}.contact{width:32px;height:32px;display:grid;place-items:center;flex:none;border:1px solid #d6dfeb;background:white;border-radius:9px;color:#8190a4;cursor:pointer}.contact svg{width:17px;height:17px}.contact.has{border:2px solid #a5ddb7;background:#effaf2;color:#2d8151}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:14px}.metric{min-width:0;border:1px solid #e3e9f1;background:#fff;border-radius:10px;padding:11px}.metric .label{font-size:11px;color:#77879e;font-weight:800}.metric .value{font-size:21px;font-weight:850;margin:6px 0 3px}.metric .detail{font-size:10px;color:#8390a2;min-height:14px}.track{height:5px;border-radius:6px;background:#e8edf4;overflow:hidden;margin-top:9px}.fill{height:100%;background:#a4afbe}.metric.green .fill{background:#35a879}.metric.yellow .fill{background:#e3ad37}.metric.red .fill{background:#d95557}.metric.green .value{color:#238458}.metric.yellow .value{color:#b38323}.metric.red .value{color:#bd4548}.children{padding:4px 16px}.team{padding:15px 2px;border-bottom:1px solid #edf1f6}.team:last-child{border-bottom:0}.team .name{font-size:14px}.team .metrics{margin-top:11px}.team .metric{background:#fafbfd;padding:9px}.team .metric .value{font-size:17px}.team .metric .label{font-size:10px}.note{font-size:12px;color:#8390a2;margin-top:18px;line-height:1.5}.overlay{display:none;position:fixed;inset:0;background:#172b47a0;z-index:10;align-items:center;justify-content:center;padding:16px}.overlay.open{display:flex}.modal{background:white;width:min(460px,100%);max-height:80vh;overflow:auto;border-radius:16px;padding:22px}.modalhead{display:flex;justify-content:space-between;gap:12px}.modal h2{font-size:18px;margin:0}.close{border:0;background:#edf1f7;border-radius:7px;padding:6px 10px;cursor:pointer}.person{border-top:1px solid #edf0f5;padding:12px 0}.person:first-child{margin-top:15px}.person strong{font-size:13px}.person .sub{margin-top:3px}a{color:#3c689d} .empty{padding:25px;color:#8b98aa}
+@media(max-width:600px){.app{padding:16px 11px 60px}h1{font-size:21px}.grouphead{padding:13px}.children{padding:0 11px}.metrics{gap:6px}.metric{padding:8px 6px}.metric .label{font-size:10px}.metric .value{font-size:18px}.metric .detail{font-size:9px}.team .metric{padding:8px 5px}.team .metric .value{font-size:16px}.controls{align-items:stretch}.seg{width:100%}.seg button{flex:1}.name{font-size:14px}.team .name{font-size:13px}}
+.overview{display:grid;gap:15px}.ov-panel{background:white;border:1px solid #cddbec;border-radius:16px;padding:17px;box-shadow:0 5px 18px #1b325012}.ov-title{font-size:17px;font-weight:850}.ov-sub{font-size:11px;color:#8190a4;margin:5px 0 14px}.ov-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.ov-stats>div{border-radius:10px;background:#edf3fa;padding:12px 8px;text-align:center}.ov-stats strong{font-size:24px;display:block}.ov-stats span{font-size:10px;color:#72829a}.ov-big{font-size:28px;font-weight:850;margin-top:18px}.ov-big span{font-size:12px;font-weight:500;color:#73849c}.ov-track{height:8px;background:#e8eef5;border-radius:10px;overflow:hidden;flex:1}.ov-track>div{height:100%;background:#4ba780;border-radius:10px}.ov-chart{height:120px;margin-top:18px;border:1px dashed #ccd8e7;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:#91a0b2;font-size:11px;background:linear-gradient(#f8fbfe,#fff)}.ov-chart-line{width:75%;border-top:2px dashed #a9bfd7}.ov-regions{display:grid;gap:8px}.ov-region{border:1px solid #e1e9f3;background:#f9fbfe;padding:12px;border-radius:10px;text-align:left;cursor:pointer;color:inherit}.ov-region-top,.ov-region-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px}.ov-region-top strong{font-size:13px}.ov-region-top span{font-size:10px;color:#8090a5}.ov-region-bottom{margin-top:9px}.ov-region-bottom b{font-size:12px;min-width:36px;text-align:right}.ov-map{min-height:270px;border-radius:13px;background:radial-gradient(ellipse at center,#e4eff0,#eef3f9);padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center}.ov-map-label{font-size:11px;color:#6c8095;margin-bottom:15px}.ov-bubbles{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px}.ov-bubble{width:var(--size);height:var(--size);border-radius:50%;background:var(--bubble);border:2px solid #ffffffaa;box-shadow:0 3px 8px #15284c22;color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer}.ov-bubble strong{font-size:17px}.ov-bubble small{font-size:8px;max-width:90%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.seg button{padding:10px 12px}@media(min-width:900px){.overview{grid-template-columns:1fr 1fr}.overview .ov-panel:last-child{grid-column:1/-1}}  .geo-map{height:370px;border-radius:12px;overflow:hidden;background:#eaf0f2}.geo-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:#61728c;margin-top:10px}.geo-legend span{display:inline-flex;align-items:center;gap:5px}.geo-dot{width:10px;height:10px;border-radius:50%;display:inline-block}.geo-info{font-size:11px;color:#8190a4;margin-top:8px}.geo-pin{border-radius:50%;border:2px solid #fff;box-shadow:0 2px 8px #15284c66;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800}.geo-popup{min-width:190px;max-width:270px;font:12px system-ui}.geo-popup button{border:0;background:#e8f0fb;border-radius:7px;padding:7px 9px;margin:5px 4px 0 0;color:#24466b;font-weight:700;cursor:pointer}.geo-popup ul{margin:7px 0;padding-left:17px;max-height:140px;overflow:auto} .marker-cluster-small,.marker-cluster-medium,.marker-cluster-large{background:#4d7fa344!important}.marker-cluster div{background:#35648d!important;color:white!important;font-weight:800!important}  .trend-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0}.trend-controls select{padding:8px 34px 8px 10px;font-size:12px}.trend-svg{display:block;width:100%;height:auto;max-height:220px}.trend-legend{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:#7889a0;margin-top:6px}.trend-message{font-size:12px;color:#8190a4;padding:28px 0;text-align:center}.trend-value{font-size:25px;font-weight:850;color:#235c87}.trend-value small{font-size:12px;font-weight:500;color:#72829a}  .filter-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.filter-controls input{border:1px solid #dce4ef;border-radius:9px;padding:10px 13px;font:inherit;font-size:13px;width:220px;max-width:100%;background:white;color:#283a56}.filter-controls input[hidden]{display:none}@media(max-width:600px){.filter-controls{width:100%}.filter-controls input{flex:1;min-width:145px}.filter-controls select{flex:1}} .refresh-status{display:flex;align-items:center;gap:6px;color:#8390a6;font-size:11px;white-space:nowrap;margin-top:4px}.refresh-status i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#9ba7b4}.refresh-status.fresh i{background:#2aa56d}.refresh-status.late i{background:#e1aa36}.refresh-status.stale i{background:#da5b57}@media(max-width:600px){.refresh-status{font-size:10px}}
+/* Activity stays on Overview only; feed is a mobile-first overlay. */
+.activity-card{grid-column:1/-1;background:#fff;border:1px solid #cddbec;border-radius:12px;padding:11px 13px;box-shadow:0 3px 12px #1b32500c}
+.activity-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.activity-title{font-size:13px;font-weight:800;color:#244366}
+.activity-link{border:0;background:transparent;color:#326994;font-size:12px;font-weight:800;cursor:pointer;padding:5px}
+.activity-latest{font-size:12px;color:#405673;line-height:1.4;margin-top:5px}
+.activity-time{color:#8795a7;font-size:10px;margin-top:3px}
+.activity-overlay{position:fixed;inset:0;background:#f4f7fb;z-index:30;display:none;flex-direction:column}
+.activity-overlay.open{display:flex}
+.activity-feed-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:15px 17px;border-bottom:1px solid #e1e9f2;background:white}
+.activity-feed-head strong{font-size:17px}
+.activity-feed-close{border:1px solid #dce4ef;border-radius:8px;background:#f5f8fb;color:#284461;padding:9px 12px;font-weight:700;cursor:pointer}
+.activity-feed-body{overflow-y:auto;overscroll-behavior:contain;padding:4px 16px 32px;max-width:680px;width:100%;margin:0 auto}
+.activity-day{font-size:11px;font-weight:800;color:#7f8ca0;margin:18px 0 4px}
+.activity-entry{padding:13px 2px;border-bottom:1px solid #e1e7ef}
+.activity-entry p{font-size:13px;line-height:1.5;color:#263d57;margin:0 0 5px}
+.activity-entry small{font-size:11px;color:#8190a6}
+.activity-latest-row{display:flex;align-items:flex-start;gap:8px;margin-top:5px}
+.activity-latest-row .activity-latest{margin-top:0}
+.activity-icon{width:17px;height:17px;flex:0 0 17px;color:#8290a3;margin-top:1px}
+.activity-icon.recent{color:#2c9568}
+.activity-icon.warm{color:#c69232}
+.activity-icon svg{display:block;width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.activity-entry{display:flex;align-items:flex-start;gap:9px}
+.activity-entry-content{min-width:0;flex:1}
+.activity-empty{font-size:13px;color:#8390a4;padding:24px 3px}
+@media(min-width:700px){.activity-overlay{background:#20304a88;align-items:center;justify-content:center}.activity-feed-shell{width:min(620px,94vw);height:min(85vh,760px);background:#f7f9fc;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 70px #14253c55}}
+.header-brand{display:flex;align-items:center;gap:10px;min-width:0}.header-copy{min-width:0}.ljh-header-logo{display:block;width:48px;height:48px;object-fit:contain;flex-shrink:0;filter:grayscale(1) contrast(.9);opacity:.66}@media(max-width:600px){.header-brand{gap:8px}.ljh-header-logo{width:40px;height:40px}.header-copy .muted{font-size:11px}}
+.header-copy h1{font-size:21px;line-height:1.14;letter-spacing:-.5px;margin:0 0 2px;font-weight:820;color:#20304a}
+.header-subtitle{font-size:12px;font-weight:700;line-height:1.35;color:#667b95}
+.header-tertiary{font-size:10px;line-height:1.35;color:#8795a9}
+.ljh-header-logo{width:48px;height:48px;filter:none;opacity:1}
+@media(max-width:600px){.header-brand{gap:8px}.ljh-header-logo{width:40px;height:40px}.header-copy h1{font-size:18px;letter-spacing:-.35px}.header-subtitle{font-size:11px}.header-tertiary{font-size:9px}header{gap:8px}}
+</style><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"><link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script></head><body><main class="app"><header><div class="header-brand"><img class="ljh-header-logo" src="assets/ljh26_logo.png" alt="Ligue Jeunes d’Haïti crest" width="48" height="48"><div class="header-copy"><h1>Ligue Jeunes D'Haïti '27</h1><div class="header-subtitle">TapIn Sports</div><div class="header-tertiary">Mobile-first readiness dashboard · updated hourly</div></div></div><div id="refresh-status" class="refresh-status" title="Latest successful data extraction"><i aria-hidden="true"></i><span id="refresh-time">Refresh time unavailable</span></div></header>
+<div class="controls"><div class="seg" id="switch"><button class="active" data-view="overview">Overview</button><button data-view="division">Division</button><button data-view="club">Club</button></div><div class="filter-controls"><input id="name-search" type="search" placeholder="Search clubs or teams…" aria-label="Search names" autocomplete="off" hidden><select id="region" aria-label="Filter region"><option value="all">All regions</option></select></div></div><div class="count" id="count">Loading readiness…</div><div class="groups" id="groups"></div><p class="note">Structure reflects current roster counts and age thresholds. Payment and Profile are not yet connected to data. Contact icons have a light green border when a contact is listed. This is a separate preview; the original dashboard remains available.</p></main>
+<div class="overlay" id="overlay"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modalhead"><div><h2 id="modalTitle">Contacts</h2><div class="sub" id="modalSub"></div></div><button class="close" id="close">Close ×</button></div><div id="people"></div></div></div>
+<div class="activity-overlay" id="activity-overlay" aria-hidden="true"><div class="activity-feed-shell" role="dialog" aria-modal="true" aria-labelledby="activity-feed-title"><div class="activity-feed-head"><strong id="activity-feed-title">League Activity</strong><button id="activity-feed-close" class="activity-feed-close" type="button">Close ×</button></div><div class="activity-feed-body" id="activity-feed-body"></div></div></div>
+<script>
+
+const REFRESH_URL='data/refresh_status.json';
+let lastExtract=null;
+function updateRefreshStatus(){
+ const el=document.getElementById('refresh-status'),text=document.getElementById('refresh-time');
+ if(!lastExtract){el.className='refresh-status';text.textContent='Refresh time unavailable';return;}
+ const age=(Date.now()-lastExtract.getTime())/60000;
+ if(!Number.isFinite(age)||age< -5){el.className='refresh-status';text.textContent='Refresh time unavailable';return;}
+ el.className='refresh-status '+(age<=75?'fresh':age<=150?'late':'stale');
+ text.textContent='Updated '+new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/New_York',timeZoneName:'short'}).format(lastExtract);
+ el.title='Last successful extraction '+Math.max(0,Math.floor(age))+' minutes ago';
+}
+fetch(REFRESH_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('missing metadata');return r.json()}).then(obj=>{
+ const dt=new Date(obj.refreshed_at);
+ if(Number.isNaN(dt.getTime()))throw Error('invalid metadata');
+ lastExtract=dt;updateRefreshStatus();
+}).catch(()=>updateRefreshStatus());
+setInterval(updateRefreshStatus,60000);
+
+const CSV_URL='data/readiness.csv',CONTACTS_URL='data/contacts.csv',TREND_URL='data/readiness_trend.csv',EVENTS_URL='data/events.csv';
+let activityEvents=[],activityError='',activityOpener=null;
+let nameSearch="",teams=[],trendRows=[],trendError='',trendMetric='structural_readiness_pct',view='overview',region='all',geoMap=null,geoLayer=null;const contacts={club:{},team:{}};
+function parseCSV(text){let rows=[],row=[],field='',quoted=false;for(let i=0;i<text.length;i++){let c=text[i];if(quoted){if(c==='"'&&text[i+1]==='"'){field+='"';i++}else if(c==='"')quoted=false;else field+=c}else if(c==='"')quoted=true;else if(c===','){row.push(field);field=''}else if(c==='\n'){row.push(field.replace(/\r$/,''));rows.push(row);row=[];field=''}else field+=c}if(field||row.length){row.push(field);rows.push(row)}const header=rows.shift()||[];header[0]=(header[0]||'').replace(/^\uFEFF/,'');return rows.filter(r=>r.some(Boolean)).map(r=>Object.fromEntries(header.map((h,i)=>[h,r[i]||''])));}
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function age(v){const m=String(v||'').match(/U\s*(\d+)/i);return m?'U'+Number(m[1]):'Unknown'}
+function thresholds(a){const n=Number(a.slice(1));return n<=8?[5,7]:n<=10?[7,9]:n<=12?[9,11]:[11,13]}
+function structure(t){const [dmin,dfull]=thresholds(t.divAge);const min=t.min??dmin,full=t.full??dfull,pct=Math.round(100*t.roster/full);return {pct,detail:t.roster+'/'+full,level:t.roster<min?'red':t.roster<full?'yellow':'green',num:t.roster,denom:full}}
+function aggregate(ts){const vals=ts.map(t=>{const [defaultMin]=thresholds(t.divAge);const minimum=t.min??defaultMin;return {credited:Math.min(t.roster,minimum),minimum,ready:t.roster>=minimum}}),num=vals.reduce((a,m)=>a+m.credited,0),denom=vals.reduce((a,m)=>a+m.minimum,0),ready=vals.filter(m=>m.ready).length,pct=denom?Math.round(num/denom*100):0;return {pct,detail:num+'/'+denom+' minimum slots · '+ready+'/'+ts.length+' teams ready',level:ready===ts.length?'green':ready===0?'red':'yellow'}}
+function metric(name,m){const available=!!m;const pct=available?m.pct:null;return '<div class="metric '+(available?m.level:'')+'"><div class="label">'+name+'</div><div class="value">'+(pct===null?'TBD':pct+'%')+'</div><div class="detail">'+(available?esc(m.detail):'Not available')+'</div><div class="track"><div class="fill" style="width:'+(pct===null?0:Math.min(100,pct))+'%"></div></div></div>'}
+function metrics(ts){return '<div class="metrics">'+metric('Structure',ts.length===1?structure(ts[0]):aggregate(ts))+metric('Payment',null)+metric('Profile',null)+'</div>'}
+const icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 19c0-3.2 2.3-5 6-5s6 1.8 6 5M17 8h5m-2.5-2.5v5"/></svg>';
+function peopleFor(scope,id,ts){if(scope==='division')return ts.flatMap(t=>contacts.team[t.teamId]||[]);return contacts[scope][id]||[]}
+function contactBtn(scope,id,ts){return '<button class="contact '+(peopleFor(scope,id,ts).length?'has':'')+'" data-scope="'+esc(scope)+'" data-id="'+esc(id)+'" aria-label="View contacts" title="View contacts">'+icon+'</button>'}
+function chips(a,g){return '<span class="chips"><span class="chip">'+esc(a)+'</span><span class="chip">'+esc(g)+'</span></span>'}
+
+function eventDate(e){return new Date(e.event_timestamp)}
+function activityInRegion(){return activityEvents.filter(e=>region==='all'||e.region===region)}
+function haitiDate(d){return new Intl.DateTimeFormat('en-US',{timeZone:'America/Port-au-Prince',month:'short',day:'numeric',year:'numeric'}).format(d)}
+function haitiTime(d){return new Intl.DateTimeFormat('en-US',{timeZone:'America/Port-au-Prince',hour:'numeric',minute:'2-digit'}).format(d)}
+function activityToday(e){const now=new Date(),d=eventDate(e);return Number.isFinite(d.getTime())&&haitiDate(now)===haitiDate(d)}
+// Small monochrome line icons; event_type is a fixed code from the export.
+// Relative to actual source event timestamps, not the hourly extraction time.
+// Invalid/future timestamps stay neutral rather than falsely appearing fresh.
+function activityAgeClass(timestamp){
+ const date=new Date(timestamp),age=Date.now()-date.getTime();
+ if(!Number.isFinite(age)||age<0)return '';
+ if(age<24*60*60*1000)return ' recent';
+ if(age<48*60*60*1000)return ' warm';
+ return '';
+}
+function refreshActivityIconAges(){
+ document.querySelectorAll('.activity-icon[data-event-time]').forEach(el=>{
+  el.classList.remove('recent','warm');
+  const state=activityAgeClass(el.dataset.eventTime).trim();
+  if(state)el.classList.add(state);
+ });
+}
+setInterval(refreshActivityIconAges,60000);
+function activityIcon(type,timestamp){
+ const shapes={
+  ROSTER_ADDITION:'<circle cx="9" cy="8" r="3"/><path d="M3.5 19v-1.1a5.5 5.5 0 0 1 11 0V19M19 8v7m-3.5-3.5h7"/>',
+  FIRST_PLAYER_REGISTERED:'<circle cx="9" cy="7.5" r="3"/><path d="M3 19v-1a6 6 0 0 1 12 0v1m4-11v7m-3.5-3.5h7"/>',
+  MINIMUM_ROSTER_REACHED:'<circle cx="12" cy="12" r="9"/><path d="m7.5 12 3 3 6-6"/>',
+  FULL_ROSTER_REACHED:'<path d="M7 3h10v8a5 5 0 0 1-10 0V3ZM7 5H4v3a4 4 0 0 0 4 4m9-7h3v3a4 4 0 0 1-4 4m-4 4v4m-4 0h8"/>',
+  TEAM_JOINED:'<path d="M4 21V3m0 1h12l-2.5 4L16 12H4"/>'
+ };
+ return '<span class="activity-icon'+activityAgeClass(timestamp)+'" data-event-time="'+esc(timestamp)+'" aria-hidden="true"><svg viewBox="0 0 24 24">'+(shapes[type]||'<circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/>')+'</svg></span>';
+}
+function activitySummary(){
+ const latest=activityInRegion()[0];
+ return '<section class="activity-card" aria-label="League activity"><div class="activity-top"><span class="activity-title">● Latest events</span><button type="button" class="activity-link" id="activity-see-all">See more ›</button></div>'+
+ (latest?'<div class="activity-latest-row">'+activityIcon(latest.event_type,latest.event_timestamp)+'<div><div class="activity-latest">'+esc(latest.message)+'</div><div class="activity-time">'+haitiDate(eventDate(latest))+' · '+haitiTime(eventDate(latest))+' · '+esc(latest.region||'Haiti')+'</div></div></div>':
+ '<div class="activity-latest">'+esc(activityError||'No league activity available yet.')+'</div>')+'</section>';
+}
+function openActivity(){
+ activityOpener=document.activeElement;
+ const holder=document.getElementById('activity-feed-body'),es=activityInRegion();
+ let lastDay='';
+ holder.innerHTML=es.length?es.map(e=>{
+   const d=eventDate(e),day=haitiDate(d);
+   const heading=day!==lastDay?'<div class="activity-day">'+esc(day)+'</div>':'';
+   lastDay=day;
+   return heading+'<div class="activity-entry">'+activityIcon(e.event_type,e.event_timestamp)+'<div class="activity-entry-content"><p>'+esc(e.message)+'</p><small>'+esc(haitiTime(d))+' · '+esc(e.region||'Haiti')+'</small></div></div>';
+ }).join(''):'<div class="activity-empty">'+esc(activityError||'No activity yet.')+'</div>';
+ const overlay=document.getElementById('activity-overlay');
+ overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');
+ document.getElementById('activity-feed-close').focus();
+ document.body.style.overflow='hidden';
+}
+function closeActivity(){
+ const overlay=document.getElementById('activity-overlay');
+ overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');
+ document.body.style.overflow='';
+ if(activityOpener?.isConnected)activityOpener.focus();
+}
+document.getElementById('activity-feed-close').onclick=closeActivity;
+document.getElementById('activity-overlay').addEventListener('click',e=>{if(e.target.id==='activity-overlay')closeActivity()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('activity-overlay').classList.contains('open'))closeActivity()});
+
+function renderOverview(subset){
+ const divs=new Set(subset.map(t=>t.divId)),clubs=new Set(subset.map(t=>t.clubId)),full=subset.filter(t=>structure(t).level==='green').length;
+ const pct=subset.length?Math.round(full/subset.length*100):0;
+ const regional=new Map();for(const t of subset){if(!regional.has(t.region))regional.set(t.region,[]);regional.get(t.region).push(t)}
+ const rows=[...regional].sort((a,b)=>b[1].length-a[1].length);
+ const summary='<section class="ov-panel"><div class="ov-title">Readiness trend</div><div class="ov-sub">Historical daily roster membership · current team and target definitions</div><div class="ov-stats"><div><strong>'+subset.length+'</strong><span>Teams</span></div><div><strong>'+divs.size+'</strong><span>Divisions</span></div><div><strong>'+clubs.size+'</strong><span>Clubs</span></div></div><div class="ov-big">'+pct+'% <span>of teams at full roster target (current snapshot)</span></div><div class="ov-track"><div style="width:'+pct+'%"></div></div><div class="trend-controls"><label for="trend-metric" class="muted">Historical metric</label><select id="trend-metric"><option value="structural_readiness_pct">Teams meeting minimum (%)</option><option value="full_roster_readiness_pct">Teams at full target (%)</option><option value="roster_completion_pct">Roster completion (%)</option><option value="registered_players">Registered players</option></select></div><div id="trend-chart"></div></section>';
+ const grid='<section class="ov-panel"><div class="ov-title">Regions by division</div><div class="ov-sub">Select a region to see its divisions</div><div class="ov-regions">'+rows.map(([name,ts])=>{const d=new Set(ts.map(t=>t.divId)).size,ready=ts.filter(t=>structure(t).level==='green').length,p=Math.round(100*ready/ts.length);return '<button class="ov-region" data-region="'+esc(name)+'"><div class="ov-region-top"><strong>'+esc(name)+'</strong><span>'+d+' divisions · '+ts.length+' teams</span></div><div class="ov-region-bottom"><div class="ov-track"><div style="width:'+p+'%"></div></div><b>'+p+'%</b></div></button>'}).join('')+'</div></section>';
+ const map='<section class="ov-panel"><div class="ov-title">Geographic team clusters</div><div class="ov-sub">Club locations · size = teams · color = roster readiness</div><div class="geo-map" id="geo-map"></div><div class="geo-legend"><span><i class="geo-dot" style="background:#d95557"></i>Below minimum</span><span><i class="geo-dot" style="background:#e3ad37"></i>Building roster</span><span><i class="geo-dot" style="background:#35a879"></i>Full target</span></div><div class="geo-info" id="geo-info"></div></section>';
+ document.getElementById('count').textContent='League overview · '+subset.length+' team assignments';document.getElementById('groups').innerHTML='<div class="overview">'+activitySummary()+summary+grid+map+'</div>';
+ document.getElementById('activity-see-all').onclick=openActivity;drawTrend();drawGeoMap(subset);document.querySelectorAll('[data-region]').forEach(b=>b.onclick=()=>{region=b.dataset.region;document.getElementById('region').value=region;view='division';document.querySelectorAll('#switch button').forEach(x=>x.classList.toggle('active',x.dataset.view===view));render();window.scrollTo({top:0,behavior:'smooth'})});return;
+}
+function drawTrend(){
+ const holder=document.getElementById('trend-chart'),selector=document.getElementById('trend-metric');if(!holder||!selector)return;
+ selector.value=trendMetric;selector.onchange=e=>{trendMetric=e.target.value;drawTrend()};
+ if(!trendRows.length){holder.innerHTML='<div class="trend-message">'+esc(trendError||'Historical trend is not available yet.')+'</div>';return}
+ const key=region==='all'?'ALL':region;
+ const available=trendRows.filter(r=>r.region===key&&Number.isFinite(Number(r[trendMetric]))).sort((a,b)=>a.trend_date.localeCompare(b.trend_date));
+ if(!available.length){holder.innerHTML='<div class="trend-message">No historical data for '+esc(key)+'</div>';return}
+ const endDate=new Date(available[available.length-1].trend_date+'T00:00:00Z'),startDate=new Date(endDate);startDate.setUTCDate(startDate.getUTCDate()-29);
+ const startISO=startDate.toISOString().slice(0,10),rows=available.filter(r=>r.trend_date>=startISO);
+ const vals=rows.map(r=>Number(r[trendMetric])),percent=trendMetric!=='registered_players';
+ const observedMin=Math.min(...vals),observedMax=Math.max(...vals);
+ const span=observedMax-observedMin;
+ const bufferBase=span>0?span:Math.max(Math.abs(observedMax)*.1,percent?.1:1);
+ let min=Math.max(0,observedMin-bufferBase*.05),max=observedMax+bufferBase*.10;
+ if(max<=min)max=min+(percent?.1:1);
+ const w=620,h=190,left=55,right=14,top=12,bottom=26,plotW=w-left-right,plotH=h-top-bottom;
+ const x=i=>left+(rows.length===1?plotW/2:i*plotW/(rows.length-1)),y=v=>top+plotH-(v-min)/(max-min)*plotH;
+ const points=vals.map((v,i)=>x(i).toFixed(1)+','+y(v).toFixed(1)).join(' ');
+ const area=left+','+(top+plotH)+' '+points+' '+(left+plotW)+','+(top+plotH);
+ const ticks=[0,.25,.5,.75,1].map(f=>{const v=min+(max-min)*f,yy=y(v);return '<line x1="'+left+'" x2="'+(w-right)+'" y1="'+yy+'" y2="'+yy+'" stroke="#e5ebf2"/><text x="'+(left-7)+'" y="'+(yy+4)+'" font-size="10" fill="#8290a6" text-anchor="end">'+(percent?v.toFixed(1)+'%':Math.round(v).toLocaleString())+'</text>'}).join('');
+ const fmt=v=>percent?v.toFixed(1)+'%':Math.round(v).toLocaleString();
+ const latest=rows[rows.length-1],first=rows[0];
+ holder.innerHTML='<div class="trend-value">'+fmt(vals[vals.length-1])+' <small>as of '+esc(latest.trend_date)+'</small></div><svg class="trend-svg" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="'+esc(selector.options[selector.selectedIndex].text)+' trend for '+esc(key)+' from '+esc(first.trend_date)+' to '+esc(latest.trend_date)+'"><polygon points="'+area+'" fill="#dcebf7" opacity=".65"/>'+ticks+'<polyline points="'+points+'" fill="none" stroke="#367caf" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="'+x(vals.length-1)+'" cy="'+y(vals[vals.length-1])+'" r="4" fill="#367caf"/></svg><div class="trend-legend"><span>'+esc(first.trend_date)+'</span><span>'+rows.length+' daily observations · '+esc(key)+'</span><span>'+esc(latest.trend_date)+'</span></div>';
+}
+function validHaiti(t){return Number.isFinite(t.lat)&&Number.isFinite(t.lng)&&t.lat>=17.8&&t.lat<=20.2&&t.lng>=-74.8&&t.lng<=-71.5}
+function geoColor(ts){const v=aggregate(ts);return v.level==='green'?'#35a879':v.level==='red'?'#d95557':'#e3ad37'}
+function drawGeoMap(subset){
+ if(geoMap){geoMap.remove();geoMap=null;geoLayer=null}
+ const el=document.getElementById('geo-map');if(!el)return;
+ const valid=subset.filter(validHaiti),missing=subset.length-valid.length;
+ document.getElementById('geo-info').textContent=valid.length+' mapped team assignments · '+missing+' without usable Haiti coordinates. Select a marker to inspect clubs and teams.';
+ if(typeof L==='undefined'){el.innerHTML='<div class="empty">Map library unavailable. Check your connection.</div>';return}
+ geoMap=L.map(el,{scrollWheelZoom:false}).setView([18.97,-72.55],8);
+ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(geoMap);
+ geoLayer=L.markerClusterGroup({showCoverageOnHover:false,spiderfyOnMaxZoom:true,maxClusterRadius:45});
+ const locations=new Map();
+ for(const t of valid){const key=t.lat.toFixed(5)+','+t.lng.toFixed(5);if(!locations.has(key))locations.set(key,[]);locations.get(key).push(t)}
+ for(const ts of locations.values()){
+  const t=ts[0],size=Math.min(57,Math.max(27,24+Math.sqrt(ts.length)*6)),color=geoColor(ts);
+  const marker=L.marker([t.lat,t.lng],{icon:L.divIcon({className:'',html:'<div class="geo-pin" style="width:'+size+'px;height:'+size+'px;background:'+color+'">'+ts.length+'</div>',iconSize:[size,size],iconAnchor:[size/2,size/2]})});
+  const clubs=[...new Set(ts.map(x=>x.club))].sort();
+  const ready=ts.filter(x=>structure(x).level==='green').length;
+  const names=clubs.slice(0,12).map(x=>'<li>'+esc(x)+'</li>').join('');
+  marker.bindPopup('<div class="geo-popup"><strong>'+ts.length+' teams · '+clubs.length+' clubs</strong><div>'+ready+' teams at full roster target</div><ul>'+names+(clubs.length>12?'<li>+'+(clubs.length-12)+' more</li>':'')+'</ul><button class="geo-drill" type="button">View divisions</button></div>');
+  marker.on('popupopen',()=>{const b=marker.getPopup().getElement().querySelector('.geo-drill');if(b)b.onclick=()=>{region=t.region;document.getElementById('region').value=region;view='division';document.querySelectorAll('#switch button').forEach(x=>x.classList.toggle('active',x.dataset.view===view));render();window.scrollTo({top:0,behavior:'smooth'})}});
+  geoLayer.addLayer(marker)
+ }
+ geoMap.addLayer(geoLayer);
+ if(geoLayer.getLayers().length)geoMap.fitBounds(geoLayer.getBounds().pad(.12),{maxZoom:10});
+ setTimeout(()=>geoMap&&geoMap.invalidateSize(),0);
+}
+function normalizeName(s){return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim()}
+function editDistanceAtMostOne(a,b){if(Math.abs(a.length-b.length)>1)return false;let i=0,j=0,edits=0;while(i<a.length&&j<b.length){if(a[i]===b[j]){i++;j++;continue}if(++edits>1)return false;if(a.length>=b.length)i++;if(b.length>=a.length)j++}return edits+(i<a.length||j<b.length?1:0)<=1}
+function fuzzyMatch(label,query){const name=normalizeName(label),q=normalizeName(query);if(!q)return true;if(name.includes(q))return true;const words=name.split(" "),parts=q.split(" ");return parts.every(p=>words.some(w=>w.startsWith(p)||(p.length>=4&&editDistanceAtMostOne(p,w))))}
+function render(){const searchEl=document.getElementById("name-search");searchEl.hidden=view==="overview";searchEl.placeholder=view==="division"?"Search divisions or teams…":"Search clubs or teams…";const subset=teams.filter(t=>(region==="all"||t.region===region)&&(view==="overview"||(fuzzyMatch(view==="division"?t.division:t.club,nameSearch)||fuzzyMatch(t.name,nameSearch))));if(view==="overview"){renderOverview(subset);return}const grouped=new Map();for(const t of subset){const id=view==='division'?t.divId:t.clubId;if(!grouped.has(id))grouped.set(id,[]);grouped.get(id).push(t)}
+const groups=[...grouped].sort((a,b)=>{const an=view==='division'?a[1][0].division:a[1][0].club,bn=view==='division'?b[1][0].division:b[1][0].club;return an.localeCompare(bn)});
+document.getElementById('count').textContent=groups.length+' '+(view==='division'?'divisions':'clubs')+' · '+subset.length+' team assignments';
+document.getElementById('groups').innerHTML=groups.length?groups.map(([id,ts])=>{const t=ts[0],title=view==='division'?t.division:t.club;const header='<div class="grouphead"><div class="heading"><div><div class="name-line"><span class="name">'+esc(title)+'</span>'+(view==='division'?chips(t.divAge,t.divGender):'')+'</div><div class="sub">'+esc(t.region)+'</div></div>'+contactBtn(view,id,ts)+'</div>'+metrics(ts)+'</div>';
+const children=ts.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(t=>'<div class="team"><div class="heading"><div><div class="name-line"><span class="name">'+esc(t.name)+'</span>'+chips(t.teamAge,t.teamGender)+'</div><div class="sub">'+esc(view==='division'?t.club:t.division)+'</div></div>'+contactBtn('team',t.teamId,[t])+'</div>'+metrics([t])+'</div>').join('');
+return '<section class="group">'+header+'<div class="children">'+children+'</div></section>'}).join(''):'<div class="empty">No teams found for this region.</div>';
+document.querySelectorAll('.contact').forEach(b=>b.onclick=()=>showContacts(b.dataset.scope,b.dataset.id))}
+function showContacts(scope,id){const ts=teams.filter(t=>scope==='team'?t.teamId===id:scope==='division'?t.divId===id:t.clubId===id);const people=peopleFor(scope,id,ts);const label=scope==='team'?ts[0]?.name:scope==='division'?ts[0]?.division:ts[0]?.club;document.getElementById('modalTitle').textContent=(label||'Unknown')+' contacts';document.getElementById('modalSub').textContent=scope==='team'?(view==='division'?ts[0]?.club:ts[0]?.division)||'':ts[0]?.region||'';
+document.getElementById('people').innerHTML=people.length?people.map(p=>'<div class="person"><strong>'+esc(p.name)+'</strong><div class="sub">'+esc(p.role||'Contact')+'</div>'+(p.email?'<div class="sub"><a href="mailto:'+encodeURIComponent(p.email)+'">'+esc(p.email)+'</a></div>':'')+'</div>').join(''):'<div class="empty">No contacts listed.</div>';document.getElementById('overlay').classList.add('open')}
+function close(){document.getElementById('overlay').classList.remove('open')}document.getElementById('close').onclick=close;document.getElementById('overlay').onclick=e=>{if(e.target.id==='overlay')close()};document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+document.getElementById('name-search').oninput=e=>{nameSearch=e.target.value;render()};document.querySelectorAll('#switch button').forEach(b=>b.onclick=()=>{view=b.dataset.view;nameSearch='';document.getElementById('name-search').value='';document.querySelectorAll('#switch button').forEach(x=>x.classList.toggle('active',x===b));render()});document.getElementById('region').onchange=e=>{region=e.target.value;render()};
+fetch(EVENTS_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Activity HTTP '+r.status);return r.text()}).then(t=>{
+ activityEvents=parseCSV(t).filter(e=>e.event_id&&e.event_timestamp&&e.message&&Number.isFinite(eventDate(e).getTime())).sort((a,b)=>eventDate(b)-eventDate(a));
+ if(view==='overview')render();
+}).catch(e=>{activityError='Activity feed unavailable';if(view==='overview')render()});
+Promise.all([fetch(TREND_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Trend HTTP '+r.status);return r.text()}).then(t=>{trendRows=parseCSV(t).filter(r=>r.trend_date&&r.region);if(!trendRows.length)throw Error('Empty trend CSV')}).catch(e=>{trendError='Historical trend unavailable: '+e.message}),fetch(CSV_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Readiness HTTP '+r.status);return r.text()}),fetch(CONTACTS_URL,{cache:'no-store'}).then(r=>r.ok?r.text():'').catch(()=>'')]).then(([,csv,ccsv])=>{const rows=parseCSV(csv);if(!rows.length)throw Error('No readiness records');teams=rows.map(r=>({teamId:r.team_id,clubId:r.club_id,divId:r.division_id,name:r.team_name||'Unnamed team',club:r.club_name||'Unknown club',division:r.division_name||'Unknown division',region:r.region||'Unknown region',divAge:age(r.division_age||r.team_age),teamAge:age(r.team_age||r.division_age),divGender:r.division_gender||r.team_gender||'Unspecified',teamGender:r.team_gender||r.division_gender||'Unspecified',roster:Number(r.player_count)||0,min:r.roster_minimum?Number(r.roster_minimum):null,full:r.roster_full_target?Number(r.roster_full_target):null,lat:r.latitude===''?NaN:Number(r.latitude),lng:r.longitude===''?NaN:Number(r.longitude)}));for(const r of parseCSV(ccsv)){const scope=r.team_id?'team':r.club_id?'club':null,id=scope==='team'?r.team_id:r.club_id;if(scope&&id)(contacts[scope][id]??=[]).push({name:r.person_name||[r.first_name,r.last_name].filter(Boolean).join(' ')||'Unknown',role:r.role_name||r.role_code||'Contact',email:r.email||''})}
+const regions=[...new Set(teams.map(t=>t.region))].sort();document.getElementById('region').innerHTML='<option value="all">All regions</option>'+regions.map(r=>'<option value="'+esc(r)+'">'+esc(r)+'</option>').join('');render()}).catch(e=>{document.getElementById('count').textContent='Unable to load dashboard';document.getElementById('groups').innerHTML='<div class="empty">'+esc(e.message)+'</div>'});
+</script></body></html>
