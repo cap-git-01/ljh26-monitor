@@ -33,6 +33,13 @@
 .activity-entry-content{min-width:0;flex:1}
 .activity-empty{font-size:13px;color:#8390a4;padding:24px 3px}
 @media(min-width:700px){.activity-overlay{background:#20304a88;align-items:center;justify-content:center}.activity-feed-shell{width:min(620px,94vw);height:min(85vh,760px);background:#f7f9fc;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 70px #14253c55}}
+/* On phones, scroll the overlay itself rather than a nested flex child. */
+@media(max-width:699px){
+ .activity-overlay.open{display:block;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+ .activity-feed-shell{display:block;flex:none;height:auto;min-height:100%;width:100%}
+ .activity-feed-head{position:sticky;top:0;z-index:2}
+ .activity-feed-body{display:block;flex:none;min-height:0;overflow:visible;max-width:680px;margin:0 auto;padding-bottom:calc(32px + env(safe-area-inset-bottom))}
+}
 .header-brand{display:flex;align-items:center;gap:10px;min-width:0}.header-copy{min-width:0}.ljh-header-logo{display:block;width:48px;height:48px;object-fit:contain;flex-shrink:0;filter:grayscale(1) contrast(.9);opacity:.66}@media(max-width:600px){.header-brand{gap:8px}.ljh-header-logo{width:40px;height:40px}.header-copy .muted{font-size:11px}}
 .header-copy h1{font-size:21px;line-height:1.14;letter-spacing:-.5px;margin:0 0 2px;font-weight:820;color:#20304a}
 .header-subtitle{font-size:12px;font-weight:700;line-height:1.35;color:#667b95}
